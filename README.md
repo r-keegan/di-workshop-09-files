@@ -69,8 +69,15 @@ Run your code and see what the difference is. So some research to answer these
 questions:
 
 - **What does utf-8 mean**
+UTF-8 is a compromise character encoding that can be as compact as ASCII (if the file is just plain English text) but can also contain any unicode characters (with some increase in file size).
+
+UTF stands for Unicode Transformation Format. The '8' means it uses 8-bit blocks to represent a character. The number of blocks needed to represent a character varies from 1 to 4.
 - **Why does adding it change what our code does?**
+One of the really nice features of UTF-8 is that it is compatible with nul-terminated strings. No character will have a nul (0) byte when encoded. This means that C code that deals with char[] will "just work".
 - Extra: **what other things could we try adding instead of `utf-8`?**
+ASCII: US-ASCII, ISO 646, ANSI_X3.4-1968
+ISO-8859-1: Latin-1, iso88591
+UTF-8: utf8, UTF_8, 
 
 Now, `readFileSync` should be returning a _string_ containing the contents of
 our file.
@@ -129,9 +136,23 @@ In this exercise, we’re going to be working with JSON. Do some research and
 answer the following questions:
 
 - **What is JSON?**
+JSON stands for JavaScript Object Notation
+JSON is a lightweight format for storing and transporting data
+JSON is often used when data is sent from a server to a web page
+
 - **What’s it used for?**
+JSON is often used when data is sent from a server to a web page
+
 - **What does it look like?**
+Data is in name/value pairs
+Data is separated by commas
+Curly braces hold objects
+Square brackets hold arrays
+
+It looks similar to JS
+
 - **Where have we seen it before?**
+JavaScript Object Notation
 
 Take a look at `shopping-basket.json` and familiarise yourself with it's
 contents. This is JSON data for a shopping cart. It is an object with one
