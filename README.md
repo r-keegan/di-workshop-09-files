@@ -51,7 +51,7 @@ console.log(fileContents)
 Before you run the code, read it carefully. **What do you think it’ll do?**
 
 Run the code in your terminal with `node part-1.js`. **What happened? Was it
-what you expected?**
+what you expected?** no - I assumed the file would read the names
 
 You’ll probably find that you get something with the word ‘`Buffer`’ and a bunch
 of weird letters and numbers. These are the bytes from our file, the raw data
